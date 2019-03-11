@@ -12,6 +12,7 @@
 */
 Route::get('/','FrontEndController@index')->name('index');
 Route::get('/post/{slug}','FrontEndController@singlePost')->name('post.single');
+Route::get('/category/{id}','FrontEndController@category')->name('category.single');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function (){
 
